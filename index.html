@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta charset="UTF-8">
+  <title>Analyse Can. 1257</title>
+  <style>
+    body {
+      font-family: serif;
+      line-height: 1.6;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+    .word {
+      cursor: pointer;
+      padding: 0 2px;
+      border-radius: 4px;
+    }
+    .nominative { background-color: #fff59d; }
+    .accusative { background-color: #a5d6a7; }
+    .genitive { background-color: #90caf9; }
+    .dative { background-color: #ffcc80; }
+    .ablative { background-color: #ef9a9a; }
+    #info-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      padding: 1em;
+      font-size: 0.9em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Canon 1257 - Analyse</h2>
+  <p>
+Bona temporalia omnia quae ad Ecclesiam universam, Apostolicam Sedem
+aliasve in Ecclesia personas iuridicas publicas pertinent, sunt bona ecclesiastica et reguntur
+canonibus qui sequuntur, necnon propriis statutis.
+    <span class="word nominative" data-info="Ecclesia universa: Nominatif féminin singulier — l'Église universelle">Ecclesia universa</span>
+    <span class="word conjunction" data-info="atque: conjonction — et aussi">atque</span>
+    <span class="word nominative" data-info="Apostolica Sedes: Nominatif féminin singulier — le Siège apostolique">Apostolica Sedes</span>,
+    <span class="word nominative" data-info="Ecclesiae particulares: Nominatif pluriel féminin — les Églises particulières">Ecclesiae particulares</span>
+    <span class="word adverb" data-info="necnon: adverbe — ainsi que">necnon</span>
+    <span class="word nominative" data-info="alia quaevis persona iuridica: nominatif féminin singulier — toute autre personne juridique quelle qu'elle soit">alia quaevis persona iuridica</span>,
+    <span class="word adverb" data-info="sive...sive: adverbes — soit... soit">sive</span>,
+    <span class="word nominative" data-info="adjectif au nominatif : public.que">publica</span>,
+    <span class="word adverb" data-info="sive...sive: adverbes — soit... soit">sive</span>,
+    <span class="word nominative" data-info="adjectif au nominatif : privé.e">privata</span>,
+    <span class="word nominative" data-info="participe parfait passif, neutre pluriel, accordé avec les sujets collectifs : « sont soumises / sont susceptibles »">subiecta</span>
+    <span class="word verb" data-info="verbe être, 3pp. présent">sunt</span>    
+    <span class="word nominative" data-info="capacia: nominatif neutre pluriel — capables de">capacia</span>
+    <span class="word accusative" data-info="bona temporalia: accusatif neutre pluriel — des biens temporels">bona temporalia</span>
+    <span class="word genitive" data-info="acquirendi: infinitif gérondif — d'acquérir">acquirendi</span>,
+    <span class="word genitive" data-info="retinendi: infinitif gérondif — de conserver">retinendi</span>,
+    <span class="word genitive" data-info="administrandi: infinitif gérondif — d'administrer">administrandi</span>
+    <span class="word conjunction" data-info="et: conjonction — et">et</span>
+    <span class="word genitive" data-info="alienandi: infinitif gérondif — d'aliéner (c'est-à-dire disposer de)">alienandi</span>
+    <span class="word accusative" data-info="ad+ accusatif: locution — selon la norme">ad normam</span>
+    <span class="word genitive" data-info="iuris: génitif singulier — du droit">iuris</span>.
+  </p>
+
+  
+  <h3>Traduction</h3>
+    <p>
+      §1 Tous les biens temporels qui appartiennent à l’Église tout entière, au
+Siège Apostolique et aux autres personnes juridiques publiques dans
+l’Église, sont biens ecclésiastiques et sont régis par les canons
+suivants ainsi que par les statuts propres de ces personnes.
+    </p>
+      <p>
+§2 Les biens temporels d’une personne juridique privée sont régis par les
+statuts propres de celle-ci et non par ces canons, sauf autre
+disposition expresse.
+</p>
+ 
+
+  <h3>Note</h3>
+  
+  <p>
+
+    </p>
+
+    <p>
+ 
+  <ul>
+        <li><a href=" https://elibruyere.github.io/Liber-5/">Retour au Livre 5</a></li> 
+        <li><a href="https://elibruyere.github.io/analyses-canoniques/">Retour à la page d'accueil</a></li>    
+  </ul>
+  
+  <div id="info-box"></div>
+
+  <script>
+    const words = document.querySelectorAll('.word');
+    const infoBox = document.getElementById('info-box');
+
+    words.forEach(word => {
+      word.addEventListener('click', () => {
+        infoBox.textContent = word.getAttribute('data-info');
+        infoBox.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
